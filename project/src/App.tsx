@@ -74,7 +74,7 @@ function App() {
       id: 4,
       title: 'Analyse de risque érosion côtière',
       category: 'Projet Personnel',
-      description: 'Projet personnel pour aider une amie lors de la rédaction de son mémoire sur l\'érosion et la manière dont les assurances gèrent cette problématique. Récupération d\'une base de données de clients, analyse de leurs adresses pour définir en fonction de leur distance au trait de côte à risque, s\'ils étaient considérés comme à risque ou non face à l\'érosion. Développement d\'une carte interactive utilisant les APIs du gouvernement pour vérifier les adresses et les données du trait de côte des Côtes d\'Armor en Bretagne.',
+      description: 'Projet personnel pour aider une étudiante lors de la rédaction de son mémoire sur l\'érosion et la manière dont les assurances gèrent cette problématique. Récupération d\'une base de données de clients, analyse de leurs adresses pour définir en fonction de leur distance au trait de côte à risque, s\'ils étaient considérés comme à risque ou non face à l\'érosion. Développement d\'une carte interactive utilisant les APIs du gouvernement pour vérifier les adresses et les données du trait de côte des Côtes d\'Armor en Bretagne.',
       tech: ['React', 'Python', 'Leaflet', 'APIs Gouvernement'],
       link: '#',
       color: 'from-red-500 to-blue-500'
