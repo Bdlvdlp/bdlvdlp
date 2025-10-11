@@ -12,6 +12,26 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Fonction pour detecter si on est sur mobile
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
+  // Liens avec deep links pour mobile
+  const getLinkedInUrl = () => {
+    if (isMobile()) {
+      return "linkedin://profile/baptiste-delaville-de-la-parra";
+    }
+    return "https://fr.linkedin.com/in/baptiste-delaville-de-la-parra";
+  };
+
+  const getGithubUrl = () => {
+    if (isMobile()) {
+      return "github://Bdlvdlp";
+    }
+    return "https://github.com/Bdlvdlp";
+  };
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -111,7 +131,7 @@ function App() {
 
           <div className="flex gap-6 justify-center">
             <a 
-              href="https://github.com/Bdlvdlp" 
+              href={getGithubUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 hover:bg-white/10 hover:scale-110 transition-all duration-300"
@@ -119,7 +139,7 @@ function App() {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://fr.linkedin.com/in/baptiste-delaville-de-la-parra" 
+              href={getLinkedInUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 hover:bg-white/10 hover:scale-110 transition-all duration-300"
@@ -258,7 +278,7 @@ function App() {
           </p>
           <div className="flex gap-6">
             <a 
-              href="https://github.com/Bdlvdlp" 
+              href={getGithubUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-white transition-colors"
@@ -266,7 +286,7 @@ function App() {
               Github
             </a>
             <a 
-              href="https://fr.linkedin.com/in/baptiste-delaville-de-la-parra" 
+              href={getLinkedInUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-white transition-colors"
