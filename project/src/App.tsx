@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code2, Sparkles, ArrowRight, ChevronDown, Fingerprint, Map } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code2, ArrowRight, ChevronDown, Map } from 'lucide-react';
 import marineNationaleLogo from './assets/marine_blanc.png';
 
 function App() {
@@ -83,21 +83,16 @@ function App() {
 
   return (
     <div className="text-white relative">
-      {/* Background uniforme pour toute la page */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-950 via-slate-950 to-orange-900 z-0">
-        {/* Cercles colorés */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/3 right-20 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute top-2/3 left-10 w-80 h-80 bg-orange-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
         <div className="absolute bottom-32 right-10 w-64 h-64 bg-red-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }} />
       </div>
-
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center z-10">
 
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 bg-gradient-to-r from-orange-500/10 to-blue-500/10 backdrop-blur-sm rounded-full border border-orange-400/20 shadow-lg shadow-orange-500/20">
-            {/* <Sparkles className="w-5 h-5 text-orange-400" /> */}
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-400 tracking-[0.2em]">
               BDLVDLP
             </span>
@@ -161,7 +156,7 @@ function App() {
         </button>
       </section>
 
-      {/* Projects Section */}
+      {/* Projets */}
       <section id="projects" className="relative py-32 px-4 z-10">
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -240,7 +235,7 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact */}
       <section id="contact" className="relative py-32 px-4 z-10">
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
