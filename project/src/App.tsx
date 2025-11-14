@@ -103,9 +103,9 @@ function ProjectCard({ project, index, scrollYProgress }: { project: typeof proj
   return (
     <motion.div 
       style={{ x, y, scale }}
-      className="absolute top-0 left-0 right-0 h-screen flex flex-col justify-center items-center p-8"
+      className="absolute top-0 left-0 right-0 h-screen flex flex-col justify-center items-center p-4 md:p-8"
     >
-      <div className="relative bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-4xl w-full overflow-hidden">
+      <div className="relative bg-white rounded-2xl shadow-2xl p-4 md:p-12 max-w-4xl w-full overflow-hidden">
         {/* Bordure de progression SVG */}
         <svg 
           className="absolute inset-0 w-full h-full pointer-events-none" 
@@ -138,21 +138,21 @@ function ProjectCard({ project, index, scrollYProgress }: { project: typeof proj
         </svg>
         
         <div className="relative z-10">
-        <p className="text-lg text-accent-color mb-4 font-medium">{`0${index + 1}`}</p>
-        <h3 className="text-3xl md:text-5xl font-serif mb-6">{project.title}</h3>
-        <p className="text-sm text-gray-500 mb-6">{project.category}</p>
-        <p className="text-gray-600 leading-relaxed mb-8 text-lg">{project.description}</p>
-        <div className="flex flex-wrap gap-3 mb-8">
+        <p className="text-sm md:text-lg text-accent-color mb-2 md:mb-4 font-medium">{`0${index + 1}`}</p>
+        <h3 className="text-2xl md:text-5xl font-serif mb-3 md:mb-6">{project.title}</h3>
+        <p className="text-xs md:text-sm text-gray-500 mb-3 md:mb-6">{project.category}</p>
+        <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-8">{project.description}</p>
+        <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-8">
           {project.tech.map((tech) => (
-            <div key={tech} className="px-4 py-2 text-sm border border-border-color rounded-full text-gray-600 bg-gray-50">
+            <div key={tech} className="px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm border border-border-color rounded-full text-gray-600 bg-gray-50">
               {tech}
             </div>
           ))}
         </div>
         {(project.id === 1 || project.id === 2 || project.id === 3) && (
-          <div className="flex items-center gap-3 p-3 bg-gray-50 border border-border-color rounded-lg w-fit">
-            <img src={marineNationaleLogo} alt="Marine Nationale" className="w-8 h-8 invert" />
-            <span className="text-sm text-gray-600">Projet Marine Nationale</span>
+          <div className="flex items-center gap-2 md:gap-3 p-2 md:p-3 bg-gray-50 border border-border-color rounded-lg w-fit">
+            <img src={marineNationaleLogo} alt="Marine Nationale" className="w-7 h-10 md:w-8 md:h-11 invert" />
+            <span className="text-xs md:text-sm text-gray-600">Projet Marine Nationale</span>
           </div>
         )}
         </div>
