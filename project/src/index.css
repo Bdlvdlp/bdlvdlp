@@ -1,29 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  .art-gallery-body {
+    --bg-color: #f8f8f7;
+    --text-color: #1a1a1a;
+    --border-color: #e5e5e5;
+    --accent-color: #E54E2E; /* Burnt Orange */
+    
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  body {
-    @apply bg-slate-950 text-white antialiased;
+  .art-gallery-body h1, .art-gallery-body h2, .art-gallery-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
   }
 }
 
-@layer utilities {
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
-  }
+.projects-stack-container {
+  position: relative;
+}
 
-  @keyframes gradient {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
+.project-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  will-change: transform;
 }
