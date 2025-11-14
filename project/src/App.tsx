@@ -215,7 +215,7 @@ const ArtGalleryPage = () => {
       >
         <header className="py-12 md:py-20 flex justify-between items-start border-b border-border-color">
           <motion.div variants={itemVariants}>
-            <h1 className="text-2xl">Baptiste Delaville De La Parra</h1>
+            <h1 className="text-2xl">Baptiste Delaville De La Parra<span className="text-accent-color">.</span></h1>
             <p className="text-sm text-gray-500">Développeur Full-Stack</p>
           </motion.div>
           <motion.div variants={itemVariants} className="text-right text-sm hidden md:block">
@@ -229,7 +229,7 @@ const ArtGalleryPage = () => {
             variants={itemVariants}
             className="text-3xl md:text-5xl leading-tight max-w-4xl"
           >
-            Étudiant développeur en alternance dans un laboratoire d'innovation de la Marine Nationale, passionné par la création d'expériences web modernes et les technologies innovantes<span className="text-accent-color">.</span>
+            Étudiant développeur en alternance dans un laboratoire d'innovation de la Marine Nationale<span className="text-accent-color">,</span> passionné par la création d'expériences web modernes et les technologies innovantes<span className="text-accent-color">.</span>
           </motion.p>
         </section>
 
